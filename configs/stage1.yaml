@@ -1,0 +1,3 @@
+freeze_llm: true
+ts_loss_weight: 1.0
+max_steps: 1200

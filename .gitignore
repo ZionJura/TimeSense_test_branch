@@ -1,0 +1,43 @@
+# Local archive of prior implementations and paper material.
+bak/
+
+# Release-scale data and experiment outputs. Keep only lightweight demos.
+data/train/*
+!data/train/.gitkeep
+!data/train/demo.jsonl
+data/eval/*
+!data/eval/.gitkeep
+!data/eval/demo/
+!data/eval/demo/**
+results/*
+!results/.gitkeep
+!results/demo/
+!results/demo/**
+# Local environments, credentials, checkpoints, and caches.
+.env
+.env.*
+.venv/
+venv/
+models
+chatts_training
+tmp/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Editor and operating-system files.
+.DS_Store
+.idea/
+.vscode/
+*~

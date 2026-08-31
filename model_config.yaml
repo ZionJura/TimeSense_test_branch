@@ -1,0 +1,14 @@
+# A backend-neutral EvalTS model profile. CLI arguments may override these values.
+evaluation_model:
+  backend: huggingface
+  model: /path/to/checkpoint
+  input_mode: auto  # auto | serialized | timeseries
+  generation:
+    max_new_tokens: 5120
+
+# To score predictions from an external runtime without importing it here:
+# evaluation_model:
+#   backend: external_jsonl
+#   output_path: /path/to/predictions.jsonl
+# Each external row must be: {"id": "<EvalTS id>", "output": "<model response>"}
+# A custom factory may use backend: package.module:factory and receive ModelSpec.

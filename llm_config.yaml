@@ -1,0 +1,26 @@
+# Replace the local URLs and model paths for your environment. Never store keys here.
+training_formatter:
+  backend: openai_compatible
+  base_url: http://127.0.0.1:8000/v1
+  api_key_env: LLM_API_KEY
+  model: local-llm
+  temperature: 0.2
+  max_tokens: 8192
+
+evaluation_api:
+  backend: openai_compatible
+  base_url: http://127.0.0.1:8000/v1
+  api_key_env: LLM_API_KEY
+  model: local-llm
+  temperature: 0.0
+  max_tokens: 8192
+
+answer_extractor:
+  backend: openai_compatible
+  base_url: http://127.0.0.1:8000/v1
+  api_key_env: LLM_API_KEY
+  model: local-llm
+  temperature: 0.0
+  max_tokens: 2048
+  request_timeout: 600
+  retry_delays: [2, 30, 60, 120, 240, 300]
